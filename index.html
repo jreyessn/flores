@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores para Dhanita ♡♥💕</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+
+        #app {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0fcd6;
+        }
+
+        .pixel__content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: white;
+            padding: 1px;
+        }
+
+        .pixel__row {
+            display: flex;
+        }
+
+        .pixel {
+            background-color: black;
+        }
+
+        .snorlax_chiquito {
+            position: absolute;
+            top: 2rem;
+            right: 2em;
+            width: 4rem;
+            z-index: 99;
+        }
+        
+        .snorlax_chiquito img {
+            width: 100%;
+        }
+
+        .corazones {
+            position: absolute;
+            top: 1rem;
+            right: 3em;
+            width: 4rem;
+            z-index: 99; 
+        }
+
+        .corazones img {
+            width: 100%;
+        }
+
+        @-webkit-keyframes roll-in-blurred-top {
+            0% {
+                -webkit-transform: translateY(-800px) rotate(-720deg);
+                        transform: translateY(-800px) rotate(-720deg);
+                -webkit-filter: blur(50px);
+                        filter: blur(50px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform: translateY(0) rotate(0deg);
+                        transform: translateY(0) rotate(0deg);
+                -webkit-filter: blur(0);
+                        filter: blur(0);
+                opacity: 1;
+            }
+            }
+            @keyframes roll-in-blurred-top {
+            0% {
+                -webkit-transform: translateY(-800px) rotate(-720deg);
+                        transform: translateY(-800px) rotate(-720deg);
+                -webkit-filter: blur(50px);
+                        filter: blur(50px);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform: translateY(0) rotate(0deg);
+                        transform: translateY(0) rotate(0deg);
+                -webkit-filter: blur(0);
+                        filter: blur(0);
+                opacity: 1;
+            }
+        }
+
+
+        .roll-1 {
+            -webkit-animation: roll-in-blurred-top 3s ease-out forwards;
+                    animation: roll-in-blurred-top 3s ease-out forwards;
+        }        
+        
+        .roll-2 {
+            -webkit-animation: roll-in-blurred-top 2.5s ease-out forwards;
+                    animation: roll-in-blurred-top 2.5s ease-out forwards;
+        }        
+        
+        .roll-3 {
+            -webkit-animation: roll-in-blurred-top 1s ease-out forwards;
+                    animation: roll-in-blurred-top 1s ease-out forwards;
+        }        
+        
+        .roll-4 {
+            -webkit-animation: roll-in-blurred-top 1.7s ease-out forwards;
+                    animation: roll-in-blurred-top 1.7s ease-out forwards;
+        }
+
+
+        .title-word {
+            animation: color-animation 4s linear infinite;
+        }
+
+        .title-word-1 {
+            --color-1: #DF8453;
+            --color-2: #3D8DAE;
+            --color-3: #E4A9A8;
+        }
+
+        .title-word-2 {
+            --color-1: #DBAD4A;
+            --color-2: #ACCFCB;
+            --color-3: #17494D;
+        }
+
+        .title-word-3 {
+            --color-1: #ACCFCB;
+            --color-2: #E4A9A8;
+            --color-3: #ACCFCB;
+        }
+
+        .title-word-4 {
+            --color-1: #3D8DAE;
+            --color-2: #DF8453;
+            --color-3: #E4A9A8;
+        }
+
+        @keyframes color-animation {
+            0%    {color: var(--color-1)}
+            32%   {color: var(--color-1)}
+            33%   {color: var(--color-2)}
+            65%   {color: var(--color-2)}
+            66%   {color: var(--color-3)}
+            99%   {color: var(--color-3)}
+            100%  {color: var(--color-1)}
+        }
+
+        /* Here are just some visual styles. 🖌 */
+
+
+        .title {
+            position: absolute;
+            top: 2rem;
+            right: 10rem;
+            z-index: 1;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 767px) {
+            .title {
+                right: 5rem;
+                font-size: 9px;
+            }
+        }
+
+        
+    </style>
+
+</head>
+<body>
+
+    <div id="app">
+        <div class="pixel__content">
+                 
+
+            <h2 class="title">
+                <span class="title-word title-word-1">Para</span>
+                <span class="title-word title-word-2">Mi</span>
+                <span class="title-word title-word-3">Beibi</span>
+                <span class="title-word title-word-4">Dhanita</span>
+            </h2>
+
+
+            <div class="snorlax_chiquito">
+                <img src="https://i.pinimg.com/originals/83/0b/53/830b53f8bbd0e9dbcade87da95abdad0.gif" alt="">
+            </div>     
+            <div class="corazones">
+                <img src="https://opengameart.org/sites/default/files/heart_9.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <audio autoplay loop>
+        <source src="./pokeflute.mp3">
+    </audio>
+
+    <script>
+        // Elements
+        const app = document.getElementById("app");
+        const pixel_content = document.querySelector(".pixel__content");
+        const snorlax_chiquito = document.querySelector(".snorlax_chiquito");
+
+        // Constants
+        const PIXEL_PER_ROW = 34
+        const SCREEN_WIDTH = window.innerWidth < 1200? window.innerWidth : 1200;
+        const GAP_PERCENTAGE_BY_PIXEL = 0.1
+        const NUM_ROWS = 25
+
+        const COLORS = {
+            'lime': "#e0fcd6",
+            'green_1': "#6ab637",
+            'green_2': "#3b6a28",
+            'yellow': "#f7c43f",
+            'brown': "#d36d24",
+            'brown_2': "#763711",
+        }
+                
+        // Calcular el nuevo ancho para los píxeles
+        const pixelWidth = (SCREEN_WIDTH / PIXEL_PER_ROW);
+        const gapByPixel = pixelWidth * GAP_PERCENTAGE_BY_PIXEL
+        const newPixelWidth = (pixelWidth - gapByPixel)
+
+        pixel_content.style.gap = `${gapByPixel}px`;
+        pixel_content.style.width = `${SCREEN_WIDTH}px`;
+        snorlax_chiquito.style.width = `${SCREEN_WIDTH * 0.15}px`
+        
+        /**
+         * Creación de elementos
+         */ 
+        const createPixelElement = () => {
+            const pixEl = document.createElement("div");
+            const rollRandom = Math.floor(Math.random() * 4) + 1;
+            pixEl.className = `pixel roll-${rollRandom}`;
+            pixEl.style.width = `${newPixelWidth}px`;
+            pixEl.style.height = `${newPixelWidth}px`;
+            
+            return pixEl
+        }
+        
+        const createRowElement = () => {
+            const pixRow = document.createElement("div")
+
+            pixRow.className = "pixel__row"
+            pixRow.style.gap = `${gapByPixel}px`;
+
+            for (let i = 0; i < PIXEL_PER_ROW; i++) {
+                pixRow.appendChild(createPixelElement());
+            }
+
+            return pixRow
+        }
+
+        const getRangeNums = (num1, num2) => {
+            return Array.from({ length: num2 - num1 + 1 }, (_, index) => num1 + index);
+        }
+
+        const applyColorAlternating = (row, rangePixel = [], primaryColor, secondaryColor) => {
+            const range = getRangeNums(rangePixel[0], rangePixel[1])
+
+            range.forEach(numPix => {
+                applyColorPixel(row, [ numPix ], numPix % 2? primaryColor : secondaryColor)
+            })
+        }
+
+        const applyColorPixelRange = (row, rangePixel = [], color) => {
+            applyColorPixel(row, getRangeNums(rangePixel[0], rangePixel[1]), color)
+        }
+
+        const applyColorPixel = (row, numPixel = [], color) => {
+            const pixels = [...row.querySelectorAll(".pixel")].filter((pixEl, index) => {
+                if (numPixel.length == 0 || numPixel.includes(index + 1)) {
+                    return true
+                }
+
+                return false
+            })
+
+            pixels.forEach(pixelEl => pixelEl.style.background = color)
+        }
+
+        const chooseRow = (numRow) => {
+            const rows = [...app.querySelectorAll('.pixel__row')]
+
+            return rows[numRow - 1]
+        }
+
+        const primeraFlor = () => {
+
+            let rowNum = 3
+
+            applyColorPixel(chooseRow(rowNum), [12, 13], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [9, 10], COLORS.yellow)
+            applyColorPixelRange(chooseRow(rowNum), [12, 13], COLORS.yellow)
+            applyColorPixelRange(chooseRow(rowNum), [15, 16], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [9, 16], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [7, 10], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [11, 14], COLORS.brown_2, COLORS.brown)
+            applyColorPixelRange(chooseRow(rowNum), [15, 18], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [7, 9], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [10, 15], COLORS.brown, COLORS.brown_2)
+            applyColorPixelRange(chooseRow(rowNum), [16, 18], COLORS.yellow)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [8], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [9, 16], COLORS.brown_2, COLORS.brown)
+            applyColorPixel(chooseRow(rowNum), [17], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [6,9], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [9, 16], COLORS.brown, COLORS.brown_2)
+            applyColorPixelRange(chooseRow(rowNum), [17, 19], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [6,9], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [9, 16], COLORS.brown_2, COLORS.brown)
+            applyColorPixelRange(chooseRow(rowNum), [17, 19], COLORS.yellow)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [8], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [9, 16], COLORS.brown, COLORS.brown_2)
+            applyColorPixel(chooseRow(rowNum), [17], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [7, 9], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [10, 15], COLORS.brown_2, COLORS.brown)
+            applyColorPixelRange(chooseRow(rowNum), [16, 18], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [3, 6], COLORS.green_1)
+            applyColorPixelRange(chooseRow(rowNum), [7, 10], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [11, 14], COLORS.brown_2, COLORS.brown)
+            applyColorPixelRange(chooseRow(rowNum), [15, 18], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [4, 5], COLORS.green_1)
+            applyColorPixelRange(chooseRow(rowNum), [6, 7], COLORS.green_2)
+            applyColorPixel(chooseRow(rowNum), [8], COLORS.green_1)
+            applyColorPixelRange(chooseRow(rowNum), [9, 16], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [4, 7], COLORS.green_1)
+            applyColorPixel(chooseRow(rowNum), [8], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [9, 10], COLORS.yellow)
+            applyColorPixelRange(chooseRow(rowNum), [12, 13], COLORS.yellow)
+            applyColorPixelRange(chooseRow(rowNum), [15, 16], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [5, 8], COLORS.green_1)
+            applyColorPixel(chooseRow(rowNum), [9], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [12, 13], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [5, 9], COLORS.green_1)
+            applyColorPixel(chooseRow(rowNum), [10], COLORS.green_2)
+            applyColorPixel(chooseRow(rowNum), [12], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [15, 17], COLORS.green_1)
+            applyColorPixelRange(chooseRow(rowNum), [20, 22], COLORS.green_1)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [6, 9], COLORS.green_1)
+            applyColorPixel(chooseRow(rowNum), [10], COLORS.green_2)
+            applyColorPixel(chooseRow(rowNum), [12], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [14, 22], COLORS.green_1)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [7, 9], COLORS.green_1)
+            applyColorPixel(chooseRow(rowNum), [10], COLORS.green_2)
+            applyColorPixel(chooseRow(rowNum), [12], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [13, 21], COLORS.green_1)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [9, 10], COLORS.green_1)
+            applyColorPixel(chooseRow(rowNum), [11], COLORS.green_2)
+            applyColorPixel(chooseRow(rowNum), [12], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [13, 14], COLORS.green_1)
+            applyColorPixelRange(chooseRow(rowNum), [15, 17], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [18, 21], COLORS.green_1)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [10, 12], COLORS.green_2)
+            applyColorPixel(chooseRow(rowNum), [13], COLORS.green_1)
+            applyColorPixel(chooseRow(rowNum), [14], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [15, 19], COLORS.green_1)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [11, 13], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [14, 18], COLORS.green_1)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [11, 12], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [15, 17], COLORS.green_1)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [11], COLORS.green_2)
+
+        }
+
+        const segundaFlor = () => {
+
+            let rowNum = 9
+
+            applyColorPixel(chooseRow(rowNum), [25, 26], COLORS.yellow)
+            
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [23, 25, 26, 28], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [22, 24], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [25, 26], COLORS.brown, COLORS.brown_2)
+            applyColorPixelRange(chooseRow(rowNum), [27, 29], COLORS.yellow)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [23], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [24, 27], COLORS.brown_2, COLORS.brown)
+            applyColorPixel(chooseRow(rowNum), [28], COLORS.yellow)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [23], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [24, 27], COLORS.brown, COLORS.brown_2)
+            applyColorPixel(chooseRow(rowNum), [28], COLORS.yellow)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [22, 24], COLORS.yellow)
+            applyColorAlternating(chooseRow(rowNum), [25, 26], COLORS.brown, COLORS.brown_2)
+            applyColorPixelRange(chooseRow(rowNum), [27, 29], COLORS.yellow)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [23,25,26, 28], COLORS.yellow)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [25,26], COLORS.yellow)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [26], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [28, 30], COLORS.green_1)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [26], COLORS.green_2)
+            applyColorPixelRange(chooseRow(rowNum), [27, 32], COLORS.green_1)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [26], COLORS.green_2)
+            applyColorPixel(chooseRow(rowNum), [24], COLORS.green_1)
+            applyColorPixelRange(chooseRow(rowNum), [27, 31], COLORS.green_1)
+            applyColorPixelRange(chooseRow(rowNum), [28, 29], COLORS.green_2)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [23, 30], COLORS.green_1)
+            applyColorPixel(chooseRow(rowNum), [24, 26, 27], COLORS.green_2)
+
+            rowNum++
+            applyColorPixelRange(chooseRow(rowNum), [23, 25], COLORS.green_1)
+            applyColorPixel(chooseRow(rowNum), [25, 26], COLORS.green_2)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [25], COLORS.green_1)
+            applyColorPixel(chooseRow(rowNum), [26], COLORS.green_2)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [26], COLORS.green_2)
+
+            rowNum++
+            applyColorPixel(chooseRow(rowNum), [26], COLORS.green_2)
+
+
+        }
+
+
+        /**
+         * Iniciar app
+         */
+         const onInit = () => {
+
+             for (let i = 0; i < NUM_ROWS; i++) {
+                 const row = createRowElement()
+     
+                 pixel_content.appendChild(row)
+     
+                 applyColorPixel(row, [], COLORS.lime)
+             }
+
+             primeraFlor()
+             segundaFlor()
+
+         }
+
+        onInit()
+
+    </script>
+</body>
+</html>
